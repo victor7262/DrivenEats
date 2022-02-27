@@ -74,9 +74,32 @@ function atualizaPedido() {
 }
 
 function enviarPedido() {
-	let mensagem = `Olá, gostaria de fazer o pedido:
-    - Prato: Frango Yin Yang
-    - Bebida: Coquinha Gelada
-    - Sobremesa: Pudim
-Total: R$ 27.70`;
+	let url = "https://wa.me/?text=" + encodeURIComponent(montaMensagem());
+
+	window.open(url, "_blank").focus();
+}
+
+function montaMensagem() {
+	let nomePrato = pratoSelecionado.querySelector("h1").innerHTML,
+		nomeBebida = bebidaSelecionada.querySelector("h1").innerHTML,
+		nomeSobremesa = sobremesaSelecionada.querySelector("h1").innerHTML;
+
+	let total =
+		getValorDaOpcao(pratoSelecionado) +
+		getValorDaOpcao(bebidaSelecionada) +
+		getValorDaOpcao(sobremesaSelecionada);
+
+	total = Math.round(total * 100) / 100;
+
+	return `Olá, gostaria de fazer o pedido:
+				- Prato: ${nomePrato}
+				- Bebida: ${nomeBebida}
+				- Sobremesa: ${nomeSobremesa}
+			Total: R$ ${total.toFixed(2).replace(".", ",")}`;
+}
+
+function getValorDaOpcao(opcao) {
+	let valorString = opcao.querySelector("p").innerHTML;
+	valorString = valorString.replace("R$ ", "").replace(",", ".");
+	return Number(valorString);
 }
