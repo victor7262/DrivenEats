@@ -74,7 +74,8 @@ function atualizaPedido() {
 }
 
 function enviarPedido() {
-	let url = "https://wa.me/?text=" + encodeURIComponent(montaMensagem());
+	let url =
+		"https://wa.me/5532999999999?text=" + encodeURIComponent(montaMensagem());
 
 	window.open(url, "_blank").focus();
 }
