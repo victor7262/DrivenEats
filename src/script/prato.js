@@ -72,3 +72,11 @@ function atualizaPedido() {
 			" itens para fechar o pedido";
 	}
 }
+
+function enviarPedido() {
+	let mensagem = `Olá, gostaria de fazer o pedido:
+    - Prato: Frango Yin Yang
+    - Bebida: Coquinha Gelada
+    - Sobremesa: Pudim
+Total: R$ 27.70`;
+}
