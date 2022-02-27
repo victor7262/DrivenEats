@@ -27,8 +27,8 @@
 			<div class="corpo">
 				<div class="opcoes">
 					<h1>Primeiro, seu prato</h1>
-					<div class="lista-opcoes">
-						<div class="opcao">
+					<div class="lista-opcoes prato">
+						<div class="opcao" onclick="selecionarPrato(this)">
 							<img src="img/prato.png" />
 							<div class="descricoes">
 								<h1>Frango Yin Yang</h1>
@@ -36,7 +36,7 @@
 								<p>R$ 14,90</p>
 							</div>
 						</div>
-						<div class="opcao">
+						<div class="opcao" onclick="selecionarPrato(this)">
 							<img src="img/prato.png" />
 							<div class="descricoes">
 								<h1>Frango Yin Yang</h1>
@@ -44,7 +44,7 @@
 								<p>R$ 14,90</p>
 							</div>
 						</div>
-						<div class="opcao">
+						<div class="opcao" onclick="selecionarPrato(this)">
 							<img src="img/prato.png" />
 							<div class="descricoes">
 								<h1>Frango Yin Yang</h1>
@@ -56,8 +56,8 @@
 				</div>
 				<div class="opcoes">
 					<h1>Agora, sua bebida</h1>
-					<div class="lista-opcoes">
-						<div class="opcao">
+					<div class="lista-opcoes bebida">
+						<div class="opcao" onclick="selecionarBebida(this)">
 							<img src="img/coca.png" />
 							<div class="descricoes">
 								<h1>Coquinha gelada</h1>
@@ -65,7 +65,7 @@
 								<p>R$ 4,90</p>
 							</div>
 						</div>
-						<div class="opcao">
+						<div class="opcao" onclick="selecionarBebida(this)">
 							<img src="img/coca.png" />
 							<div class="descricoes">
 								<h1>Coquinha gelada</h1>
@@ -73,7 +73,7 @@
 								<p>R$ 4,90</p>
 							</div>
 						</div>
-						<div class="opcao">
+						<div class="opcao" onclick="selecionarBebida(this)">
 							<img src="img/coca.png" />
 							<div class="descricoes">
 								<h1>Coquinha gelada</h1>
@@ -85,8 +85,8 @@
 				</div>
 				<div class="opcoes">
 					<h1>Por fim, sua sobremesa</h1>
-					<div class="lista-opcoes">
-						<div class="opcao">
+					<div class="lista-opcoes sobremesa">
+						<div class="opcao" onclick="selecionarSobremesa(this)">
 							<img src="img/sobremesa.png" />
 							<div class="descricoes">
 								<h1>Pudim</h1>
@@ -94,7 +94,7 @@
 								<p>R$ 7,90</p>
 							</div>
 						</div>
-						<div class="opcao">
+						<div class="opcao" onclick="selecionarSobremesa(this)">
 							<img src="img/sobremesa.png" />
 							<div class="descricoes">
 								<h1>Pudim</h1>
@@ -102,7 +102,7 @@
 								<p>R$ 7,90</p>
 							</div>
 						</div>
-						<div class="opcao">
+						<div class="opcao" onclick="selecionarSobremesa(this)">
 							<img src="img/sobremesa.png" />
 							<div class="descricoes">
 								<h1>Pudim</h1>
@@ -117,7 +117,10 @@
 				<div class="btn-pedido-pendente">
 					Selecione os 3 itens para fechar o pedido
 				</div>
+				<div class="btn-pedido-pronto">Fechar pedido</div>
 			</div>
 		</div>
+
+		<script src="script/prato.js"></script>
 	</body>
 </html>
